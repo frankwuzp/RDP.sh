@@ -2,9 +2,9 @@
 printf "Installing RDP Be Patience... " >&2
 #{
 #添加用户
-sudo useradd -m N3LK
-sudo adduser N3LK sudo
-echo 'N3LK:0789' | sudo chpasswd
+sudo useradd -m F2AK
+sudo adduser F2AK sudo
+echo 'F2AK:6626' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 #安装谷歌远程桌面
 sudo apt-get update
@@ -39,7 +39,7 @@ sudo apt install --assume-yes --fix-broken
 #安装文件管理器和文件编辑器
 sudo apt install nautilus nano -y 
 #添加用户到远程桌面用户组
-sudo adduser N3LK chrome-remote-desktop
+sudo adduser F2AK chrome-remote-desktop
 #安装网络命令支持
 sudo apt install net-tools # ifconfig
 sudo apt install iputils-ping # ping
@@ -91,7 +91,7 @@ printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
 read -p "Paste Here: " CRP
-su - N3LK -c """$CRP"""
+su - F2AK -c """$CRP"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 if sudo apt-get upgrade &> /dev/null
 then
